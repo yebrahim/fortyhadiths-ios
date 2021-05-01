@@ -52,6 +52,7 @@ struct ContentView: View {
       .navigationTitle("nawawi_hadiths")
     }
     .environment(\.locale, .init(identifier: settings.locale))
+    .environment(\.layoutDirection, settings.locale == "ar" ? .rightToLeft : .leftToRight)
   }
 }
 

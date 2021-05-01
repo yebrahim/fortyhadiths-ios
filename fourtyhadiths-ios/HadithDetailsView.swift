@@ -1,10 +1,3 @@
-//
-//  HadithDetailsView.swift
-//  fourtyhadiths-ios
-//
-//  Created by Yasser Elsayed on 4/30/21.
-//
-
 import SwiftUI
 
 struct HadithDetailsView: View {

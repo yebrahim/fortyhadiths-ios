@@ -7,18 +7,12 @@ struct SettingsView: View {
   @ObservedObject
   var settings: Settings
   
-  @State
-  var locale = Settings.defaultLocale
-  
-  @State
-  var fontSize = Settings.defaultFontSize
-  
   var body: some View {
     NavigationView {
       Form {
         Section(header: Text("language")) {
           
-          Picker("Language", selection: $locale) {
+          Picker("Language", selection: $settings.locale) {
             ForEach(settings.locales.sorted(by: >), id: \.key) { key, value in
               Text(value)
             }
@@ -30,7 +24,7 @@ struct SettingsView: View {
             Text("fontSize")
             
             Slider(
-              value: $fontSize,
+              value: $settings.fontSize,
               in: settings.minFontSize...settings.maxFontSize,
               step: 5,
               minimumValueLabel: Text("A").font(.system(.subheadline)),
@@ -43,19 +37,14 @@ struct SettingsView: View {
         }
       }
       .navigationBarTitle("settings")
-      .onAppear(perform: {
-        locale = settings.locale
-        fontSize = settings.fontSize
-      })
       .navigationBarItems(trailing: Button(action: {
-        settings.fontSize = fontSize
-        settings.locale = locale
-        
         presentationMode.wrappedValue.dismiss()
       }, label: {
         Text("Dismiss")
       }))
     }
+    .environment(\.locale, .init(identifier: settings.locale))
+    .environment(\.layoutDirection, settings.locale == "ar" ? .rightToLeft : .leftToRight)
   }
 }
 
