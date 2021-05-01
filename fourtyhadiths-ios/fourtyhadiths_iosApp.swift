@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct fourtyhadiths_iosApp: App {
+    
+    init() {
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
