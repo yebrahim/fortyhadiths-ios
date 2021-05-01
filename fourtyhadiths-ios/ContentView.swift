@@ -3,7 +3,11 @@ import SwiftUI
 struct ContentView: View {
   
   var hadiths: [HadithData] = Hadiths.data
-  @State var locale = "en"
+  
+  @ObservedObject
+  var settings = Settings()
+  
+  @State var showSettings = false
   
   var body: some View {
     
@@ -14,7 +18,7 @@ struct ContentView: View {
         List(hadiths.enumerated().map({ $0 }), id: \.element.id) { i, hadith in
           
           NavigationLink(
-            destination: HadithDetailsView(hadith: hadith),
+            destination: HadithDetailsView(hadith: hadith, settings: settings),
             label: {
               
               Image(systemName: "\(i + 1).square.fill")
@@ -31,14 +35,23 @@ struct ContentView: View {
                 
                 Text(hadith.summary)
                   .fontWeight(.semibold)
+                  .font(.system(size: CGFloat(settings.fontSize)))
               }
             }
           )
         }
       }
+      .navigationBarItems(trailing: Button(action: {
+        showSettings = true
+      }, label: {
+        Text("settings")
+      }))
+      .sheet(isPresented: $showSettings, content: {
+        SettingsView(settings: settings)
+      })
       .navigationTitle("nawawi_hadiths")
     }
-    .environment(\.locale, .init(identifier: locale))
+    .environment(\.locale, .init(identifier: settings.locale))
   }
 }
 
