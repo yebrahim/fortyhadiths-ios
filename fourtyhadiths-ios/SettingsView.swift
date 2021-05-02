@@ -13,10 +13,13 @@ struct SettingsView: View {
         Section(header: Text("language")) {
           
           Picker("Language", selection: $settings.locale) {
-            ForEach(settings.locales.sorted(by: >), id: \.key) { key, value in
+            ForEach(settings.getLocales(), id: \.key) { key, value in
               Text(value)
             }
           }
+          .onChange(of: settings.locale, perform: { value in
+            UserDefaults.standard.set(value, forKey: Settings.languageStoreKey)
+          })
           .pickerStyle(SegmentedPickerStyle())
           .padding()
           
@@ -32,6 +35,9 @@ struct SettingsView: View {
             ) {
               Text("Speed")
             }
+            .onChange(of: settings.fontSize, perform: { value in
+              UserDefaults.standard.set(value, forKey: Settings.fontSizeStoreKey)
+            })
           }
           .padding()
         }
@@ -44,7 +50,7 @@ struct SettingsView: View {
       }))
     }
     .environment(\.locale, .init(identifier: settings.locale))
-    .environment(\.layoutDirection, settings.locale == "ar" ? .rightToLeft : .leftToRight)
+    .environment(\.layoutDirection, settings.isArabic() ? .rightToLeft : .leftToRight)
   }
 }
 

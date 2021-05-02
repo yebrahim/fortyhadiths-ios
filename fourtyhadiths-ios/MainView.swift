@@ -6,53 +6,75 @@ struct MainView: View {
   var settings = Settings()
   
   @State var showSettings = false
+  @State var pressed = false
+  
+  let defaultFont = "AlNile"
+  let defaultFontBold = "AlNile-Bold"
+  let headerFont = "NotoNastaliqUrdu-Bold"
+  
+  init() {
+    UINavigationBar.appearance().largeTitleTextAttributes = [
+      .font: UIFont(name: headerFont, size: 40)!
+    ]
+  }
   
   var body: some View {
     
     NavigationView {
-      
-      VStack (alignment: .leading) {
-        ForEach(1...10, id: \.self) { i in
-          
-          NavigationLink(
-            destination: HadithDetailsView(index: i, settings: settings),
-            label: {
-              
-              Image(systemName: "\(i).square.fill")
-                .resizable()
-                .foregroundColor(.gray)
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 20, height: 20)
-                .padding(.trailing)
-              
-              VStack (alignment: .leading) {
-                let hadithId = "hadith\(i)Id"
-                let hadithSummary = "hadith\(i)Summary"
+      ScrollView(showsIndicators: false) {
+        
+        VStack {
+          ForEach(1...10, id: \.self) { i in
+            
+            NavigationLink(
+              destination: HadithDetailsView(index: i, settings: settings),
+              label: {
                 
-                Text(LocalizedStringKey(hadithId))
-                  .font(.footnote)
-                  .foregroundColor(.secondary)
-                
-                Text(LocalizedStringKey(hadithSummary))
-                  .fontWeight(.semibold)
-                  .font(.system(size: CGFloat(settings.fontSize)))
+                HStack {
+                  Image(systemName: "\(i).square.fill")
+                    .resizable()
+                    .foregroundColor(.gray)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 20, height: 20)
+                    .padding(.trailing)
+                  
+                  VStack (alignment: .leading) {
+                    let hadithId = "hadith\(i)Id"
+                    let hadithSummary = "hadith\(i)Summary"
+                    
+                    Text(LocalizedStringKey(hadithId))
+                      .font(.custom(defaultFont, size: 13, relativeTo: .footnote))
+                      .foregroundColor(.secondary)
+                    
+                    Text(LocalizedStringKey(hadithSummary))
+                      .font(.custom(defaultFontBold, size: 0.8 * CGFloat(settings.calcFontSize())))
+                      .foregroundColor(.primary)
+                  }
+                }
+                .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
+                .padding(10)
+                .background(Color.white)
+                .cornerRadius(10)
+                .contentShape(Rectangle())
+                .shadow(color: .gray, radius:1)
               }
-            }
-          )
+            )
+            .padding(.horizontal)
+          }
         }
+        .navigationBarItems(trailing: Button(action: {
+          showSettings = true
+        }, label: {
+          Text("settings")
+        }))
+        .sheet(isPresented: $showSettings, content: {
+          SettingsView(settings: settings)
+        })
+        .navigationBarTitle("nawawi_hadiths")
       }
-      .navigationBarItems(trailing: Button(action: {
-        showSettings = true
-      }, label: {
-        Text("settings")
-      }))
-      .sheet(isPresented: $showSettings, content: {
-        SettingsView(settings: settings)
-      })
-      .navigationTitle("nawawi_hadiths")
     }
     .environment(\.locale, .init(identifier: settings.locale))
-    .environment(\.layoutDirection, settings.locale == "ar" ? .rightToLeft : .leftToRight)
+    .environment(\.layoutDirection, settings.isArabic() ? .rightToLeft : .leftToRight)
   }
 }
 

@@ -2,16 +2,30 @@ import SwiftUI
 
 class Settings: ObservableObject {
   
-  static var defaultLocale = Locale.current.languageCode!
-  static let defaultFontSize = 17.0
-
+  static let defaultLocale = Locale.current.languageCode!
+  static let defaultFontSize = 20.0
+  static let languageStoreKey = "SETTINGS_LANGUAGE"
+  static let fontSizeStoreKey = "SETTINGS_FONTSIZE"
+  
   let locales = ["en": "English", "ar": "العربية"]
   let minFontSize = 10.0
   let maxFontSize = 40.0
-
-  @Published
-  var locale = defaultLocale
   
   @Published
-  var fontSize = defaultFontSize
+  var locale = UserDefaults.standard.string(forKey: languageStoreKey) ?? defaultLocale
+  
+  @Published
+  var fontSize = UserDefaults.standard.double(forKey: fontSizeStoreKey) <= 0 ? defaultFontSize : UserDefaults.standard.double(forKey: fontSizeStoreKey)
+  
+  func getLocales() -> Array<(key: String, value: String)> {
+    isArabic() ? locales.sorted(by: <) : locales.sorted(by: >)
+  }
+  
+  func isArabic() -> Bool {
+    locale == "ar"
+  }
+  
+  func calcFontSize() -> Double {
+    isArabic() ? fontSize + 10 : fontSize
+  }
 }
