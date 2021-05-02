@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DF0C8043263BD3FD0019307D /* fourtyhadiths_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C8042263BD3FD0019307D /* fourtyhadiths_iosApp.swift */; };
-		DF0C8045263BD3FD0019307D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C8044263BD3FD0019307D /* ContentView.swift */; };
+		DF0C8045263BD3FD0019307D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C8044263BD3FD0019307D /* MainView.swift */; };
 		DF0C8047263BD3FF0019307D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0C8046263BD3FF0019307D /* Assets.xcassets */; };
 		DF0C804A263BD3FF0019307D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0C8049263BD3FF0019307D /* Preview Assets.xcassets */; };
-		DF0C8053263BE7C10019307D /* ContentView.bkp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C8052263BE7C10019307D /* ContentView.bkp.swift */; };
-		DF0C805B263BEB350019307D /* En.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C805A263BEB350019307D /* En.swift */; };
 		DF0C805E263BEFA90019307D /* HadithDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C805D263BEFA80019307D /* HadithDetailsView.swift */; };
 		DF7726B3263D2F6F007A1228 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF7726B5263D2F6F007A1228 /* Localizable.strings */; };
 		DF7726BA263D42AF007A1228 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7726B9263D42AF007A1228 /* Settings.swift */; };
@@ -22,12 +20,10 @@
 /* Begin PBXFileReference section */
 		DF0C803F263BD3FD0019307D /* fourtyhadiths-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fourtyhadiths-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0C8042263BD3FD0019307D /* fourtyhadiths_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourtyhadiths_iosApp.swift; sourceTree = "<group>"; };
-		DF0C8044263BD3FD0019307D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF0C8044263BD3FD0019307D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DF0C8046263BD3FF0019307D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF0C8049263BD3FF0019307D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF0C804B263BD3FF0019307D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF0C8052263BE7C10019307D /* ContentView.bkp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.bkp.swift; sourceTree = "<group>"; };
-		DF0C805A263BEB350019307D /* En.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = En.swift; sourceTree = "<group>"; };
 		DF0C805D263BEFA80019307D /* HadithDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HadithDetailsView.swift; sourceTree = "<group>"; };
 		DF7726B4263D2F6F007A1228 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DF7726B7263D2FC1007A1228 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -66,11 +62,9 @@
 		DF0C8041263BD3FD0019307D /* fourtyhadiths-ios */ = {
 			isa = PBXGroup;
 			children = (
-				DF0C8059263BEB210019307D /* i18n */,
 				DF0C8042263BD3FD0019307D /* fourtyhadiths_iosApp.swift */,
-				DF0C8044263BD3FD0019307D /* ContentView.swift */,
+				DF0C8044263BD3FD0019307D /* MainView.swift */,
 				DF0C805D263BEFA80019307D /* HadithDetailsView.swift */,
-				DF0C8052263BE7C10019307D /* ContentView.bkp.swift */,
 				DF0C8046263BD3FF0019307D /* Assets.xcassets */,
 				DF0C804B263BD3FF0019307D /* Info.plist */,
 				DF0C8048263BD3FF0019307D /* Preview Content */,
@@ -86,14 +80,6 @@
 				DF0C8049263BD3FF0019307D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		DF0C8059263BEB210019307D /* i18n */ = {
-			isa = PBXGroup;
-			children = (
-				DF0C805A263BEB350019307D /* En.swift */,
-			);
-			path = i18n;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,10 +155,8 @@
 			files = (
 				DF7726BD263D42F0007A1228 /* SettingsView.swift in Sources */,
 				DF7726BA263D42AF007A1228 /* Settings.swift in Sources */,
-				DF0C8045263BD3FD0019307D /* ContentView.swift in Sources */,
-				DF0C8053263BE7C10019307D /* ContentView.bkp.swift in Sources */,
+				DF0C8045263BD3FD0019307D /* MainView.swift in Sources */,
 				DF0C805E263BEFA90019307D /* HadithDetailsView.swift in Sources */,
-				DF0C805B263BEB350019307D /* En.swift in Sources */,
 				DF0C8043263BD3FD0019307D /* fourtyhadiths_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

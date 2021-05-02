@@ -1,8 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
-  
-  var hadiths: [HadithData] = Hadiths.data
+struct MainView: View {
   
   @ObservedObject
   var settings = Settings()
@@ -60,6 +58,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    MainView()
   }
 }
