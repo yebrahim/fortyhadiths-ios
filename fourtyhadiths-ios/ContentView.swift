@@ -14,14 +14,13 @@ struct ContentView: View {
     NavigationView {
       
       VStack (alignment: .leading) {
-        
-        List(hadiths.enumerated().map({ $0 }), id: \.element.id) { i, hadith in
+        ForEach(1...10, id: \.self) { i in
           
           NavigationLink(
-            destination: HadithDetailsView(hadith: hadith, settings: settings),
+            destination: HadithDetailsView(index: i, settings: settings),
             label: {
               
-              Image(systemName: "\(i + 1).square.fill")
+              Image(systemName: "\(i).square.fill")
                 .resizable()
                 .foregroundColor(.gray)
                 .aspectRatio(contentMode: .fit)
@@ -29,11 +28,14 @@ struct ContentView: View {
                 .padding(.trailing)
               
               VStack (alignment: .leading) {
-                Text(hadith.id)
+                let hadithId = "hadith\(i)Id"
+                let hadithSummary = "hadith\(i)Summary"
+                
+                Text(LocalizedStringKey(hadithId))
                   .font(.footnote)
                   .foregroundColor(.secondary)
                 
-                Text(hadith.summary)
+                Text(LocalizedStringKey(hadithSummary))
                   .fontWeight(.semibold)
                   .font(.system(size: CGFloat(settings.fontSize)))
               }
