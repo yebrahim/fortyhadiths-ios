@@ -89,5 +89,76 @@ hadith9Post = "[Al-Bukhari & Muslim]";
 hadith10Id = "Tenth Hadith";
 hadith10Summary = "Restricting Oneself to the Permissible";
 hadith10Pre = "On the authority of Abu Hurayrah (may Allah be pleased with him) who said: The Messenger of Allah (peace be upon him) said:";
-hadith103Text = "\“Allah the Almighty is good and accepts only that which is good. And verily Allah has commanded the believers to do that which He has commanded the Messengers. So the Almighty has said: \"O (you) Messengers! Eat of the tayyibat (good things), and perform righteous deeds\" [23:51] and the Almighty has said: \"O you who believe! Eat of the lawful things that We have provided you\" [2:172]. Then he (peace be upon him) mentioned a man who, having journeyed far, is dishevelled and dusty, and who spreads out his hands to the sky saying, \"O Lord! O Lord!\" while his food is haram, his drink is haram, his clothing is haram, and he has been nourished with haram, so how can [his supplication] be answered?\"";
-hadith103Post = "[Muslim]";
+hadith10Text = "\“Allah the Almighty is good and accepts only that which is good. And verily Allah has commanded the believers to do that which He has commanded the Messengers. So the Almighty has said: \"O (you) Messengers! Eat of the tayyibat (good things), and perform righteous deeds\" [23:51] and the Almighty has said: \"O you who believe! Eat of the lawful things that We have provided you\" [2:172]. Then he (peace be upon him) mentioned a man who, having journeyed far, is dishevelled and dusty, and who spreads out his hands to the sky saying, \"O Lord! O Lord!\" while his food is haram, his drink is haram, his clothing is haram, and he has been nourished with haram, so how can [his supplication] be answered?\"";
+hadith10Post = "[Muslim]";
+
+
+hadith11Id = "Eleventh Hadith";
+hadith11Summary = "Being Cautious of the Doubtful";
+hadith11Pre = "On the authority of Abu Muhammad al-Hasan ibn Ali ibn Abee Talib (may Allah be pleased with him), the grandson of the Messenger of Allah (peace and blessings of Allah be upon him), and the one much loved by him, who said: I memorized from the Messenger of Allah (peace and blessings of Allah be upon him):";
+hadith11Text = "\"Leave what makes you doubtful for what does not.\"";
+hadith11Post = "Related by Tirmidhi & Nasai";
+
+
+hadith12Id = "Twelveth Hadith";
+hadith12Summary = "Leaving that Which Does Not Concern You";
+hadith12Pre = "On the authority of Abu Hurayrah (may Allah be pleased with him) who said: The Messenger of Allah (peace be upon him) said:";
+hadith12Text = "\"Part of the perfection of one's Islam is his leaving that which does not concern him.\"";
+hadith12Post = "[Tirmidhi]";
+
+
+hadith13Id = "Thirteenth Hadith";
+hadith13Summary = "Love for Your Brother What You Love for Yourself";
+hadith13Pre = "On the authority of Abu Hamzah Anas bin Malik (may Allah be pleased with him) - the servant of the Messenger of Allah (peace and blessings of Allah be upon him) - that the Prophet (peace and blessings of Allah be upon him) said:";
+hadith13Text = "\"None of you will believe until you love for your brother what you love for yourself.\"";
+hadith13Post = "[Bukhari & Muslim]";
+
+
+hadith14Id = "Fourteenth Hadith";
+hadith14Summary = "Prohibition of Blood of a Muslim";
+hadith14Pre = "On the authority of Abdullah Ibn Masud (may Allah be pleased with him) who said: The Messenger of Allah (peace be upon him) said:";
+hadith14Text = "\"It is not permissible to spill the blood of a Muslim except in three [instances]: the married person who commits adultery, a life for a life, and the one who forsakes his religion and separates from the community.\"";
+hadith14Post = "[Al-Bukhari & Muslim]";
+
+
+hadith15Id = "Fifteenth Hadith";
+hadith15Summary = "Islamic Manners";
+hadith15Pre = "On the authority of Abu Hurayrah (may Allah be pleased with him), that the Messenger of Allah (peace be upon him) said:";
+hadith15Text = "\"Let him who believes in Allah and the Last Day speak good, or keep silent; and let him who believes in Allah and the Last Day be generous to his neighbour; and let him who believes in Allah and the Last Day be generous to his guest.\"";
+hadith15Post = "Related by Bukhari & Muslim";
+
+
+hadith16Id = "Sixteenth Hadith";
+hadith16Summary = "The Forbiddance of Anger";
+hadith16Pre = "On the authority of Abu Hurayrah (may Allah be pleased with him):";
+hadith16Text = "\“A man said to the Prophet, ‘Give me advice.’ The Prophet, peace be upon him, said, ‘Do not get angry.’ The man asked repeatedly and the Prophet answered each time, ‘Do not get angry.’\”";
+hadith16Post = "[Al-Bukhari & Muslim]";
+
+
+hadith17Id = "Seventeenth Hadith";
+hadith17Summary = "Prescription of Ihsan (Perfection)";
+hadith17Pre = "On the authority of Abu Ya'la Shaddad bin Aws (may Allah be pleased with him), that the Messenger of Allah (peace be upon him) said:";
+hadith17Text = "\"Verily Allah has prescribed ihsan (perfection) in all things. Thus if you kill, kill well; and if you slaughter, slaughter well. Let each one of you sharpen his blade and let him spare suffering to the animal he slaughters.\"";
+hadith17Post = "[Muslim]";
+
+
+hadith18Id = "Eighteenth Hadith";
+hadith18Summary = "Follow Up a Bad Deed with a Good Deed";
+hadith18Pre = "On the authority of Abu Dharr Jundub ibn Junadah, and Abu 'Abd-ir-Rahman Mu'adh bin Jabal (may Allah be pleased with them) that the Messenger of Allah (peace and blessing of Allah be upon him) said:";
+hadith18Text = "\"Be conscious of Allah wherever you are. Follow the bad deed with a good one to erase it, and engage others with beautiful character.\"";
+hadith18Post = "Related by Tirmidhi";
+
+
+hadith19Id = "Nineteenth Hadith";
+hadith19Summary = "Be Mindful of Allah and Allah will Protect You";
+hadith19Pre = "Abu al-‘Abbas ‘Abdullah bin ‘Abbas(ra) reports:";
+hadith19Text = "\“One day I was riding (a horse/camel) behind the Prophet, peace and blessings be upon him, when he said, ‘Young man, I will teach you some words. Be mindful of God, and He will take care of you. Be mindful of Him, and you shall find Him at your side. If you ask, ask of God. If you need help, seek it from God. Know that if the whole world were to gather together in order to help you, they would not be able to help you except if God had written so. And if the whole world were to gather together in order to harm you, they would not harm you except if God had written so. The pens have been lifted, and the pages are dry.’\”";
+hadith19Post = "Related by Tirmidhi";
+
+
+hadith20Id = "Twentieth Hadith";
+hadith20Summary = "Modesty is from Faith";
+hadith20Pre = "Abu Mas'ud 'Uqbah bin 'Amr al-Ansari al-Badri(ra) reported that the Messenger of Allah(sas) said:";
+hadith20Text = "\"Among the early prophetic teachings that have reached people is this: if you do not feel shame, do what you wish.\”";
+hadith20Post = "[Al-Bukhari]";
+

@@ -24,7 +24,7 @@ struct MainView: View {
       ScrollView(showsIndicators: false) {
         
         VStack {
-          ForEach(1...10, id: \.self) { i in
+          ForEach(1...20, id: \.self) { i in
             
             NavigationLink(
               destination: HadithDetailsView(index: i, settings: settings),
@@ -53,10 +53,7 @@ struct MainView: View {
                 }
                 .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
                 .padding(10)
-                .background(Color.white)
-                .cornerRadius(10)
                 .contentShape(Rectangle())
-                .shadow(color: .gray, radius:1)
               }
             )
             .padding(.horizontal)
