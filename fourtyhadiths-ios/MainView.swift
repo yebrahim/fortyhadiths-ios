@@ -10,7 +10,7 @@ struct MainView: View {
   
   let defaultFont = "AlNile"
   let defaultFontBold = "AlNile-Bold"
-  let headerFont = "NotoNastaliqUrdu-Bold"
+  let headerFont = "AlNile-Bold"
   
   init() {
     UINavigationBar.appearance().largeTitleTextAttributes = [
@@ -24,7 +24,7 @@ struct MainView: View {
       ScrollView(showsIndicators: false) {
         
         VStack {
-          ForEach(1...20, id: \.self) { i in
+          ForEach(1...42, id: \.self) { i in
             
             NavigationLink(
               destination: HadithDetailsView(index: i, settings: settings),
