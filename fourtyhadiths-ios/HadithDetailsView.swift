@@ -3,7 +3,7 @@ import SwiftUI
 struct HadithDetailsView: View {
   
   let arabicFont = "AlNile"
-  let englishFont = "TrebuchetMs"
+  let englishFont = "AppleSymbols"
   var index: Int
   var settings: Settings
 
