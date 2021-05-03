@@ -3,7 +3,7 @@ import SwiftUI
 class Settings: ObservableObject {
   
   static let defaultLocale = Locale.current.languageCode!
-  static let defaultFontSize = 25.0
+  static let defaultFontSize = 22.0
   static let languageStoreKey = "SETTINGS_LANGUAGE"
   static let fontSizeStoreKey = "SETTINGS_FONTSIZE"
   

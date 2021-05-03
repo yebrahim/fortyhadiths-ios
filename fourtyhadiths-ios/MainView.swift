@@ -34,11 +34,12 @@ struct MainView: View {
               destination: HadithDetailsView(index: i, settings: settings),
               label: {
                 
-                HStack {
+                HStack(alignment: .top) {
                   Image(systemName: "\(i).square.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20, height: 20)
+                    .padding(.top)
                   
                   VStack (alignment: .leading) {
                     let hadithId = "hadith\(i)Id"
@@ -51,12 +52,12 @@ struct MainView: View {
                     Text(LocalizedStringKey(hadithSummary))
                       .font(.custom(defaultFontBold, size: 0.9 * CGFloat(settings.calcFontSize())))
                       .foregroundColor(.primary)
-                    Divider()
                   }
                   
                 }
-                .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
                 .contentShape(Rectangle())
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(5)
               }
             )
             .padding(.horizontal)
