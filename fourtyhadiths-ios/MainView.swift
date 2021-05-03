@@ -40,6 +40,7 @@ struct MainView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20, height: 20)
                     .padding(.top)
+                    .foregroundColor(.accentColor)
                   
                   VStack (alignment: .leading) {
                     let hadithId = "hadith\(i)Id"

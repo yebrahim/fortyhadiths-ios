@@ -7,8 +7,6 @@ struct SettingsView: View {
   @ObservedObject
   var settings: Settings
   
-  @State var font = ""
-  
   var body: some View {
     NavigationView {
       Form {
@@ -42,25 +40,6 @@ struct SettingsView: View {
             })
           }
           .padding()
-          
-          
-          Picker("", selection: $font) {
-                  ForEach(UIFont.familyNames, id: \.self) { family in
-                    ForEach(UIFont.fontNames(forFamilyName: family), id: \.self) { fontName in
-                      Text("\(fontName)")
-                    }
-                  }
-                }
-                .pickerStyle(WheelPickerStyle())
-
-                Text(font)
-
-                VStack(alignment: .center, spacing: 10) {
-                  Text("Preview of the font")
-                    .font(.custom("\(font)", size: 25))
-                  Text("اللغة العربية")
-                    .font(.custom("\(font)", size: 25))
-                }
         }
       }
       .navigationBarTitle("settings")
