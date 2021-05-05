@@ -12,6 +12,7 @@
 		DF0C8047263BD3FF0019307D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0C8046263BD3FF0019307D /* Assets.xcassets */; };
 		DF0C804A263BD3FF0019307D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0C8049263BD3FF0019307D /* Preview Assets.xcassets */; };
 		DF0C805E263BEFA90019307D /* HadithDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C805D263BEFA80019307D /* HadithDetailsView.swift */; };
+		DF5FAE2D26427094009EFEB5 /* Diwan Thuluth.ttc in Resources */ = {isa = PBXBuildFile; fileRef = DF5FAE2B26427094009EFEB5 /* Diwan Thuluth.ttc */; };
 		DF7726B3263D2F6F007A1228 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF7726B5263D2F6F007A1228 /* Localizable.strings */; };
 		DF7726BA263D42AF007A1228 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7726B9263D42AF007A1228 /* Settings.swift */; };
 		DF7726BD263D42F0007A1228 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7726BC263D42F0007A1228 /* SettingsView.swift */; };
@@ -25,6 +26,7 @@
 		DF0C8049263BD3FF0019307D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF0C804B263BD3FF0019307D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF0C805D263BEFA80019307D /* HadithDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HadithDetailsView.swift; sourceTree = "<group>"; };
+		DF5FAE2B26427094009EFEB5 /* Diwan Thuluth.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Diwan Thuluth.ttc"; sourceTree = "<group>"; };
 		DF7726B4263D2F6F007A1228 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DF7726B7263D2FC1007A1228 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DF7726B9263D42AF007A1228 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				DF0C8048263BD3FF0019307D /* Preview Content */,
 				DF7726B9263D42AF007A1228 /* Settings.swift */,
 				DF7726BC263D42F0007A1228 /* SettingsView.swift */,
+				DF5FAE2B26427094009EFEB5 /* Diwan Thuluth.ttc */,
 			);
 			path = "fourtyhadiths-ios";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				DF0C804A263BD3FF0019307D /* Preview Assets.xcassets in Resources */,
 				DF7726B3263D2F6F007A1228 /* Localizable.strings in Resources */,
 				DF0C8047263BD3FF0019307D /* Assets.xcassets in Resources */,
+				DF5FAE2D26427094009EFEB5 /* Diwan Thuluth.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

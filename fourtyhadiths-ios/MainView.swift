@@ -1,5 +1,12 @@
 import SwiftUI
 
+let thuluthFont = "Diwan Thuluth"
+let alNileFont = "AlNile"
+let alNileFontBold = "AlNile-Bold"
+let englishFont = "AppleSymbols"
+let englishFontBold = "AlNile-Bold"
+let englishDecoratedFont = "Georgia-Italic"
+
 struct MainView: View {
   
   @ObservedObject
@@ -8,18 +15,13 @@ struct MainView: View {
   @State var showSettings = false
   @State var pressed = false
   
-  let defaultFont = "AlNile"
-  let defaultFontBold = "AlNile-Bold"
-  let headerFont = "AlNile-Bold"
-  
   init() {
     UINavigationBar.appearance().largeTitleTextAttributes = [
-      .font: UIFont(name: headerFont, size: 40)!
+      .font: UIFont(name: settings.isArabic() ? thuluthFont : englishFont, size: 40)!
     ]
   }
   
   var body: some View {
-    
     NavigationView {
       ScrollView(showsIndicators: false) {
         
@@ -33,32 +35,7 @@ struct MainView: View {
             NavigationLink(
               destination: HadithDetailsView(index: i, settings: settings),
               label: {
-                
-                HStack(alignment: .top) {
-                  Image(systemName: "\(i).square.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 20, height: 20)
-                    .padding(.top)
-                    .foregroundColor(.accentColor)
-                  
-                  VStack (alignment: .leading) {
-                    let hadithId = "hadith\(i)Id"
-                    let hadithSummary = "hadith\(i)Summary"
-                    
-                    Text(LocalizedStringKey(hadithId))
-                      .font(.custom(defaultFont, size: 13, relativeTo: .footnote))
-                      .foregroundColor(.secondary)
-                    
-                    Text(LocalizedStringKey(hadithSummary))
-                      .font(.custom(defaultFontBold, size: 0.9 * CGFloat(settings.calcFontSize())))
-                      .foregroundColor(.primary)
-                  }
-                  
-                }
-                .contentShape(Rectangle())
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(5)
+                HadithItem(settings: settings, index: i)
               }
             )
             .padding(.horizontal)
@@ -87,17 +64,54 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct CoverHadith: View {
-  let settings: Settings
+  @ObservedObject var settings: Settings
   
   var body: some View {
-    let coverFont = settings.isArabic() ? "DiwanMishafi" : "Georgia-Italic"
+    let coverFont = settings.isArabic() ? thuluthFont : englishDecoratedFont
     let coverFontSize = settings.isArabic() ? CGFloat(35) : CGFloat(20)
     
     Text("cover_hadith")
       .font(.custom(coverFont, size: coverFontSize))
-      .lineSpacing(3)
+      .lineSpacing(1)
       .multilineTextAlignment(.center)
       .foregroundColor(.secondary)
       .padding(30)
+  }
+}
+
+struct HadithItem: View {
+  @ObservedObject var settings: Settings
+  var index: Int
+  
+  var body: some View {
+    let hadithIdFont = settings.isArabic() ? thuluthFont : alNileFont
+    let hadithSummaryFont = settings.isArabic() ? alNileFontBold : englishFontBold
+    let hadithIdFontSize = settings.isArabic() ? CGFloat(25) : CGFloat(14)
+    
+    HStack(alignment: .top) {
+      ZStack {
+        Circle().fill(Color.accentColor).frame(width: 30)
+        Text("\(index)")
+          .foregroundColor(.white)
+          .fontWeight(.bold)
+      }
+      .padding(.vertical)
+      
+      VStack (alignment: .leading) {
+        let hadithId = "hadith\(index)Id"
+        let hadithSummary = "hadith\(index)Summary"
+        
+        Text(LocalizedStringKey(hadithId))
+          .font(.custom(hadithIdFont, size: hadithIdFontSize, relativeTo: .footnote))
+          .foregroundColor(.secondary)
+        
+        Text(LocalizedStringKey(hadithSummary))
+          .font(.custom(hadithSummaryFont, size: 0.8 * CGFloat(settings.calcFontSize())))
+          .foregroundColor(.primary)
+      }
+    }
+    .contentShape(Rectangle())
+    .frame(maxWidth: .infinity, alignment: .leading)
+    .padding(5)
   }
 }
