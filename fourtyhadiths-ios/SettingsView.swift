@@ -9,6 +9,7 @@ struct SettingsView: View {
   
   @State var selectedLocale = Settings.defaultLocale
   @State var selectedFontSize = Settings.defaultFontSize
+  @State var hideDiacritics = false
   
   var body: some View {
     RtlNavigationView(settings: settings) {
@@ -22,6 +23,10 @@ struct SettingsView: View {
           }
           .pickerStyle(SegmentedPickerStyle())
           .padding()
+          
+          if settings.isArabic() {
+            Toggle("hide_diacritics", isOn: $hideDiacritics)
+          }
           
           HStack (spacing: 20) {
             Text("fontSize")
@@ -42,13 +47,16 @@ struct SettingsView: View {
       .onAppear() {
         selectedLocale = settings.locale
         selectedFontSize = settings.fontSize
+        hideDiacritics = settings.hideDiacritics
       }
       .onDisappear() {
         settings.locale = selectedLocale
         settings.fontSize = selectedFontSize
+        settings.hideDiacritics = hideDiacritics
         
         UserDefaults.standard.set(selectedLocale, forKey: Settings.languageStoreKey)
         UserDefaults.standard.set(selectedFontSize, forKey: Settings.fontSizeStoreKey)
+        UserDefaults.standard.set(hideDiacritics, forKey: Settings.hideDiacriticsStoreKey)
       }
       .navigationBarTitle("settings")
       .navigationBarItems(trailing: Button(action: {

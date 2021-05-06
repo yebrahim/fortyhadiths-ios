@@ -6,28 +6,28 @@ struct HadithDetailsView: View {
   let englishFont = "AppleSymbols"
   var index: Int
   var settings: Settings
-
+  
   var body: some View {
     let idKey = "hadith\(index)Id"
-
+    
     ScrollView(showsIndicators: false) {
       
       let font = settings.isArabic() ? arabicFont : englishFont
-      let preKey = "hadith\(index)Pre"
-      let textKey = "hadith\(index)Text"
-      let PostKey = "hadith\(index)Post"
-
+      let pre = localized("hadith\(index)Pre")
+      let text = localized("hadith\(index)Text")
+      let post = localized("hadith\(index)Post")
+      
       VStack (alignment: .leading, spacing: 20) {
-        Text(LocalizedStringKey(preKey))
+        Text(settings.hideDiacritics ? pre.removeDiacritics() : pre)
           .multilineTextAlignment(.leading)
           .font(.custom(font, size: CGFloat(settings.calcFontSize())))
           .foregroundColor(.secondary)
         
-        Text(LocalizedStringKey(textKey))
+        Text(settings.hideDiacritics ? text.removeDiacritics() : text)
           .multilineTextAlignment(.leading)
           .font(.custom(font, size: CGFloat(settings.calcFontSize())))
         
-        Text(LocalizedStringKey(PostKey))
+        Text(settings.hideDiacritics ? post.removeDiacritics() : post)
           .multilineTextAlignment(.leading)
           .font(.custom(font, size: CGFloat(settings.calcFontSize())))
           .foregroundColor(.secondary)
@@ -36,6 +36,20 @@ struct HadithDetailsView: View {
     }
     .navigationTitle(LocalizedStringKey(idKey))
     .environment(\.layoutDirection, settings.isArabic() ? .rightToLeft : .leftToRight)
+  }
+  
+  func localized(_ str: String) -> String {
+    let path = Bundle.main.path(forResource: settings.locale, ofType: "lproj")
+    let bundleName = Bundle(path: path!)
+    return NSLocalizedString(str, tableName: nil, bundle: bundleName!, value: "", comment: "")
+  }
+}
+
+extension String {
+  func removeDiacritics() -> String {
+    let regex = try! NSRegularExpression(pattern: "[\\u064b-\\u064f\\u0650-\\u0652]", options: NSRegularExpression.Options.caseInsensitive)
+    let range = NSMakeRange(0, self.unicodeScalars.count)
+    return regex.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: "")
   }
 }
 

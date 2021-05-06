@@ -89,14 +89,14 @@ struct HadithItem: View {
       .padding(.vertical)
       
       VStack (alignment: .leading) {
-        let hadithId = "hadith\(index)Id"
-        let hadithSummary = "hadith\(index)Summary"
+        let hadithId = localized("hadith\(index)Id")
+        let hadithSummary = localized("hadith\(index)Summary")
         
-        Text(LocalizedStringKey(hadithId))
+        Text(hadithId)
           .font(.custom(hadithIdFont, size: hadithIdFontSize, relativeTo: .footnote))
           .foregroundColor(.secondary)
         
-        Text(LocalizedStringKey(hadithSummary))
+        Text(settings.hideDiacritics ? hadithSummary.removeDiacritics() : hadithSummary)
           .font(.custom(hadithSummaryFont, size: 0.8 * CGFloat(settings.calcFontSize())))
           .foregroundColor(.primary)
       }
@@ -104,5 +104,11 @@ struct HadithItem: View {
     .contentShape(Rectangle())
     .frame(maxWidth: .infinity, alignment: .leading)
     .padding(5)
+  }
+  
+  func localized(_ str: String) -> String {
+    let path = Bundle.main.path(forResource: settings.locale, ofType: "lproj")
+    let bundleName = Bundle(path: path!)
+    return NSLocalizedString(str, tableName: nil, bundle: bundleName!, value: "", comment: "")
   }
 }
