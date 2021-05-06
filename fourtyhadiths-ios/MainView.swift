@@ -13,16 +13,9 @@ struct MainView: View {
   var settings = Settings()
   
   @State var showSettings = false
-  @State var pressed = false
-  
-  init() {
-    UINavigationBar.appearance().largeTitleTextAttributes = [
-      .font: UIFont(name: settings.isArabic() ? thuluthFont : englishFont, size: 40)!
-    ]
-  }
   
   var body: some View {
-    NavigationView {
+    RtlNavigationView(settings: settings) {
       ScrollView(showsIndicators: false) {
         
         CoverHadith(settings: settings)
@@ -52,8 +45,6 @@ struct MainView: View {
         .navigationBarTitle("nawawi_hadiths")
       }
     }
-    .environment(\.locale, .init(identifier: settings.locale))
-    .environment(\.layoutDirection, settings.isArabic() ? .rightToLeft : .leftToRight)
   }
 }
 

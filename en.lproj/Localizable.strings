@@ -2,6 +2,7 @@
 
 nawawi_hadiths = "Nawawi Hadiths";
 settings = "Settings";
+apply = "Apply";
 language = "Language";
 fontSize = "Font Size";
 english = "English";

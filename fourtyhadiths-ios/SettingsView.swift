@@ -7,19 +7,19 @@ struct SettingsView: View {
   @ObservedObject
   var settings: Settings
   
+  @State var selectedLocale = Settings.defaultLocale
+  @State var selectedFontSize = Settings.defaultFontSize
+  
   var body: some View {
-    NavigationView {
+    RtlNavigationView(settings: settings) {
       Form {
         Section(header: Text("language")) {
           
-          Picker("Language", selection: $settings.locale) {
+          Picker("Language", selection: $selectedLocale) {
             ForEach(settings.getLocales(), id: \.key) { key, value in
               Text(value)
             }
           }
-          .onChange(of: settings.locale, perform: { value in
-            UserDefaults.standard.set(value, forKey: Settings.languageStoreKey)
-          })
           .pickerStyle(SegmentedPickerStyle())
           .padding()
           
@@ -27,7 +27,7 @@ struct SettingsView: View {
             Text("fontSize")
             
             Slider(
-              value: $settings.fontSize,
+              value: $selectedFontSize,
               in: settings.minFontSize...settings.maxFontSize,
               step: 5,
               minimumValueLabel: Text("A").font(.system(.subheadline)),
@@ -35,22 +35,28 @@ struct SettingsView: View {
             ) {
               Text("Speed")
             }
-            .onChange(of: settings.fontSize, perform: { value in
-              UserDefaults.standard.set(value, forKey: Settings.fontSizeStoreKey)
-            })
           }
           .padding()
         }
+      }
+      .onAppear() {
+        selectedLocale = settings.locale
+        selectedFontSize = settings.fontSize
+      }
+      .onDisappear() {
+        settings.locale = selectedLocale
+        settings.fontSize = selectedFontSize
+        
+        UserDefaults.standard.set(selectedLocale, forKey: Settings.languageStoreKey)
+        UserDefaults.standard.set(selectedFontSize, forKey: Settings.fontSizeStoreKey)
       }
       .navigationBarTitle("settings")
       .navigationBarItems(trailing: Button(action: {
         presentationMode.wrappedValue.dismiss()
       }, label: {
-        Text("Dismiss")
+        Text("apply")
       }))
     }
-    .environment(\.locale, .init(identifier: settings.locale))
-    .environment(\.layoutDirection, settings.isArabic() ? .rightToLeft : .leftToRight)
   }
 }
 
