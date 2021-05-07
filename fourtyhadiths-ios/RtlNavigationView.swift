@@ -14,7 +14,7 @@ struct RtlNavigationView<Content>: View where Content: View {
     self.content = content()
     
     UINavigationBar.appearance().largeTitleTextAttributes = [
-      .font: UIFont(name: settings.isArabic() ? thuluthFont : englishFont, size: settings.isArabic() ? 80 : 40)!,
+      .font: UIFont(name: settings.isArabic() ? thuluthFont : englishFont, size: settings.isArabic() ? 55 : 40)!,
     ]
   }
   

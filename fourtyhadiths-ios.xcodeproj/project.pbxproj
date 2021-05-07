@@ -14,6 +14,8 @@
 		DF0C805E263BEFA90019307D /* HadithDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C805D263BEFA80019307D /* HadithDetailsView.swift */; };
 		DF5FAE2D26427094009EFEB5 /* Diwan Thuluth.ttc in Resources */ = {isa = PBXBuildFile; fileRef = DF5FAE2B26427094009EFEB5 /* Diwan Thuluth.ttc */; };
 		DF5FAE3326428B37009EFEB5 /* RtlNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FAE3226428B37009EFEB5 /* RtlNavigationView.swift */; };
+		DF6B10A92644B9F100EF41A5 /* HadithItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B10A82644B9F100EF41A5 /* HadithItem.swift */; };
+		DF6B10AB2644BA5D00EF41A5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B10AA2644BA5D00EF41A5 /* Fonts.swift */; };
 		DF7726B3263D2F6F007A1228 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF7726B5263D2F6F007A1228 /* Localizable.strings */; };
 		DF7726BA263D42AF007A1228 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7726B9263D42AF007A1228 /* Settings.swift */; };
 		DF7726BD263D42F0007A1228 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7726BC263D42F0007A1228 /* SettingsView.swift */; };
@@ -29,6 +31,8 @@
 		DF0C805D263BEFA80019307D /* HadithDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HadithDetailsView.swift; sourceTree = "<group>"; };
 		DF5FAE2B26427094009EFEB5 /* Diwan Thuluth.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Diwan Thuluth.ttc"; sourceTree = "<group>"; };
 		DF5FAE3226428B37009EFEB5 /* RtlNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RtlNavigationView.swift; sourceTree = "<group>"; };
+		DF6B10A82644B9F100EF41A5 /* HadithItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HadithItem.swift; sourceTree = "<group>"; };
+		DF6B10AA2644BA5D00EF41A5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		DF7726B4263D2F6F007A1228 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DF7726B7263D2FC1007A1228 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DF7726B9263D42AF007A1228 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 			children = (
 				DF0C8042263BD3FD0019307D /* fourtyhadiths_iosApp.swift */,
 				DF0C8044263BD3FD0019307D /* MainView.swift */,
+				DF6B10A82644B9F100EF41A5 /* HadithItem.swift */,
 				DF0C805D263BEFA80019307D /* HadithDetailsView.swift */,
 				DF0C8046263BD3FF0019307D /* Assets.xcassets */,
 				DF0C804B263BD3FF0019307D /* Info.plist */,
@@ -76,6 +81,7 @@
 				DF7726BC263D42F0007A1228 /* SettingsView.swift */,
 				DF5FAE3226428B37009EFEB5 /* RtlNavigationView.swift */,
 				DF5FAE2B26427094009EFEB5 /* Diwan Thuluth.ttc */,
+				DF6B10AA2644BA5D00EF41A5 /* Fonts.swift */,
 			);
 			path = "fourtyhadiths-ios";
 			sourceTree = "<group>";
@@ -160,8 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6B10AB2644BA5D00EF41A5 /* Fonts.swift in Sources */,
 				DF7726BD263D42F0007A1228 /* SettingsView.swift in Sources */,
 				DF7726BA263D42AF007A1228 /* Settings.swift in Sources */,
+				DF6B10A92644B9F100EF41A5 /* HadithItem.swift in Sources */,
 				DF0C8045263BD3FD0019307D /* MainView.swift in Sources */,
 				DF5FAE3326428B37009EFEB5 /* RtlNavigationView.swift in Sources */,
 				DF0C805E263BEFA90019307D /* HadithDetailsView.swift in Sources */,
@@ -306,6 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"fourtyhadiths-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = 95Q777ZC89;
 				ENABLE_PREVIEWS = YES;
@@ -315,7 +324,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yelsayed.fourtyhadiths-ios";
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yelsayed.fourtyhadiths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,6 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"fourtyhadiths-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = 95Q777ZC89;
 				ENABLE_PREVIEWS = YES;
@@ -337,7 +348,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yelsayed.fourtyhadiths-ios";
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yelsayed.fourtyhadiths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

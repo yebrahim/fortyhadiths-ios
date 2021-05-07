@@ -1,0 +1,6 @@
+let thuluthFont = "Diwan Thuluth"
+let alNileFont = "AlNile"
+let alNileFontBold = "AlNile-Bold"
+let englishFont = "AppleSymbols"
+let englishFontBold = "AlNile-Bold"
+let englishDecoratedFont = "Georgia-Italic"

@@ -2,8 +2,6 @@ import SwiftUI
 
 struct HadithDetailsView: View {
   
-  let arabicFont = "AlNile"
-  let englishFont = "AppleSymbols"
   var index: Int
   var settings: Settings
   
@@ -12,7 +10,7 @@ struct HadithDetailsView: View {
     
     ScrollView(showsIndicators: false) {
       
-      let font = settings.isArabic() ? arabicFont : englishFont
+      let font = settings.isArabic() ? alNileFont : englishFont
       let pre = localized("hadith\(index)Pre")
       let text = localized("hadith\(index)Text")
       let post = localized("hadith\(index)Post")
