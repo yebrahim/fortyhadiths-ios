@@ -21,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DF0C803F263BD3FD0019307D /* fourtyhadiths-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "fourtyhadiths-ios.app"; path = "/Users/yasser.elsayed/dev/fourtyhadiths-ios/build/Debug-iphoneos/fourtyhadiths-ios.app"; sourceTree = "<absolute>"; };
 		DF0C8042263BD3FD0019307D /* fourtyhadiths_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourtyhadiths_iosApp.swift; sourceTree = "<group>"; };
 		DF0C8044263BD3FD0019307D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DF0C8046263BD3FF0019307D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +34,7 @@
 		DF7726B7263D2FC1007A1228 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DF7726B9263D42AF007A1228 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		DF7726BC263D42F0007A1228 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DFCEEB62264733E100C1DAC3 /* 40 Hadiths - الأربعون.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "40 Hadiths - الأربعون.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +53,7 @@
 			children = (
 				DF7726B5263D2F6F007A1228 /* Localizable.strings */,
 				DF0C8041263BD3FD0019307D /* fourtyhadiths-ios */,
+				DFCEEB62264733E100C1DAC3 /* 40 Hadiths - الأربعون.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,7 +92,7 @@
 			);
 			name = "fourtyhadiths-ios";
 			productName = "fourtyhadiths-ios";
-			productReference = DF0C803F263BD3FD0019307D /* fourtyhadiths-ios.app */;
+			productReference = DFCEEB62264733E100C1DAC3 /* 40 Hadiths - الأربعون.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -295,7 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.0;
+				CURRENT_PROJECT_VERSION = 1.1.1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 95Q777ZC89;
 				ENABLE_PREVIEWS = YES;
@@ -305,9 +306,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yelsayed.fourtyhadiths;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "40 Hadiths - الأربعون";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.0;
+				CURRENT_PROJECT_VERSION = 1.1.1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 95Q777ZC89;
 				ENABLE_PREVIEWS = YES;
@@ -329,9 +330,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yelsayed.fourtyhadiths;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "40 Hadiths - الأربعون";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
