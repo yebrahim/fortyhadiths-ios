@@ -73,6 +73,8 @@ struct HadithDetailsView_Previews: PreviewProvider {
 
 struct StepperButton: View {
 
+  let size: CGFloat = 40
+
   var forward: Bool
   var disabled: Bool
   var action: () -> Void
@@ -81,7 +83,7 @@ struct StepperButton: View {
     Button(action: action) {
       Image(systemName: "chevron.\(forward ? "forward" : "backward").circle.fill")
         .resizable()
-        .frame(width: 50, height: 50)
+        .frame(width: size, height: size)
         .foregroundColor(.accentColor)
     }
     .padding()
