@@ -2,7 +2,7 @@ import SwiftUI
 
 struct HadithDetailsView: View {
   
-  var index: Int
+  @State var index: Int
   var settings: Settings
   
   var body: some View {
@@ -25,10 +25,24 @@ struct HadithDetailsView: View {
           .multilineTextAlignment(.leading)
           .font(.custom(font, size: CGFloat(settings.calcFontSize())))
         
+        Divider()
+
         Text(settings.hideDiacritics ? post.removeDiacritics() : post)
           .multilineTextAlignment(.leading)
           .font(.custom(font, size: CGFloat(settings.calcFontSize())))
           .foregroundColor(.secondary)
+
+        HStack {
+          StepperButton(forward: false, disabled: index < 2) {
+            index -= 1
+          }
+
+          Spacer()
+
+          StepperButton(forward: true, disabled: index >= 42) {
+            index += 1
+          }
+        }
       }
       .padding()
     }
@@ -54,5 +68,23 @@ extension String {
 struct HadithDetailsView_Previews: PreviewProvider {
   static var previews: some View {
     HadithDetailsView(index: 1, settings: Settings())
+  }
+}
+
+struct StepperButton: View {
+
+  var forward: Bool
+  var disabled: Bool
+  var action: () -> Void
+
+  var body: some View {
+    Button(action: action) {
+      Image(systemName: "chevron.\(forward ? "forward" : "backward").circle.fill")
+        .resizable()
+        .frame(width: 50, height: 50)
+        .foregroundColor(.accentColor)
+    }
+    .padding()
+    .disabled(disabled)
   }
 }
