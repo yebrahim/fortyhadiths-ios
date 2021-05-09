@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct fourtyhadiths_iosApp: App {
+struct fortyhadiths_iosApp: App {
   
   var body: some Scene {
     WindowGroup {
