@@ -22,6 +22,7 @@ struct RtlNavigationView<Content>: View where Content: View {
     NavigationView {
       content
     }
+    .navigationViewStyle(StackNavigationViewStyle())
     .id(settings.isArabic())
     .environment(\.locale, .init(identifier: settings.locale))
     .environment(\.layoutDirection, settings.isArabic() ? .rightToLeft : .leftToRight)
