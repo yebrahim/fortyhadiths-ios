@@ -3,6 +3,8 @@ Simple iOS app for viewing the 40 Nawawi hadiths.
 
 Supports English and Arabic, changing font size, and automatic system light/dark theme.
 
+Text is obtained from https://alnawawiforty.com/, translation of hadiths from https://40hadithnawawi.com/.
+
 #### [Get it here](https://apps.apple.com/us/app/40-hadiths-%D8%A7%D9%84%D8%A3%D8%B1%D8%A8%D8%B9%D9%88%D9%86/id1564885579).
 
 <span>
