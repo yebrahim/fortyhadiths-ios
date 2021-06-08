@@ -80,9 +80,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DF0C803E263BD3FD0019307D /* fortyhadiths-ios */ = {
+		DF0C803E263BD3FD0019307D /* fourtyhadiths-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF0C804E263BD3FF0019307D /* Build configuration list for PBXNativeTarget "fortyhadiths-ios" */;
+			buildConfigurationList = DF0C804E263BD3FF0019307D /* Build configuration list for PBXNativeTarget "fourtyhadiths-ios" */;
 			buildPhases = (
 				DF0C803B263BD3FD0019307D /* Sources */,
 				DF0C803C263BD3FD0019307D /* Frameworks */,
@@ -92,7 +92,7 @@
 			);
 			dependencies = (
 			);
-			name = "fortyhadiths-ios";
+			name = "fourtyhadiths-ios";
 			productName = "fourtyhadiths-ios";
 			productReference = DFCEEB62264733E100C1DAC3 /* 40 Hadiths - الأربعون.app */;
 			productType = "com.apple.product-type.application";
@@ -125,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DF0C803E263BD3FD0019307D /* fortyhadiths-ios */,
+				DF0C803E263BD3FD0019307D /* fourtyhadiths-ios */,
 			);
 		};
 /* End PBXProject section */
@@ -298,7 +298,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.1;
+				CURRENT_PROJECT_VERSION = 1.1.2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 95Q777ZC89;
 				ENABLE_PREVIEWS = YES;
@@ -308,8 +308,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yelsayed.fortyhadiths;
+				MARKETING_VERSION = 1.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yelsayed.fourtyhadiths;
 				PRODUCT_NAME = "40 Hadiths - الأربعون";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.1;
+				CURRENT_PROJECT_VERSION = 1.1.2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 95Q777ZC89;
 				ENABLE_PREVIEWS = YES;
@@ -332,8 +332,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yelsayed.fortyhadiths;
+				MARKETING_VERSION = 1.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yelsayed.fourtyhadiths;
 				PRODUCT_NAME = "40 Hadiths - الأربعون";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -352,7 +352,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DF0C804E263BD3FF0019307D /* Build configuration list for PBXNativeTarget "fortyhadiths-ios" */ = {
+		DF0C804E263BD3FF0019307D /* Build configuration list for PBXNativeTarget "fourtyhadiths-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DF0C804F263BD3FF0019307D /* Debug */,
